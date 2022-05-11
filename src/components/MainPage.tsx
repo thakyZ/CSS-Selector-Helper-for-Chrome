@@ -110,8 +110,8 @@ const PrimaryPage = () => {
       {state.copyResult === CopyResult.DEFAULT
         ? clipboardIcon
         : state.copyResult === CopyResult.SUCCESS
-        ? checkIcon
-        : alertCircleIcon}
+          ? checkIcon
+          : alertCircleIcon}
     </button>
   );
 

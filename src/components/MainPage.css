@@ -69,11 +69,13 @@
   width: 100%;
   height: 100%;
 }
+
 .ahWrapper {
   flex: 1;
   overflow: auto;
   padding-bottom: 16px;
 }
+
 .stickyFooter {
   max-height: 33%;
   flex-shrink: 0;

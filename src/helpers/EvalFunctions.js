@@ -109,25 +109,25 @@ function selectElem(query, desiredMatch, visibleOnly, inspectCurrentMatch) {
   my partial implementation (+ = implemented, - = unimplemented) of:
   http://www.w3.org/TR/webdriver/#determining-visibility
   https://github.com/SeleniumHQ/selenium/blob/34a7aee63973dc586caffe9dcd1e76a4c6701ee9/javascript/atoms/dom.js#L460
-  
+
   +OPTIONs and OPTGROUP elements are treated as special cases, they are
     considered shown if and only if the enclosing select element is visible.
-  
+
   +The element must have a height and width greater than 0px.
-  
+
   +The element must not be visible if there is a CSS3 Transform property that
     moves the element out of the viewport and can not be scrolled to.
-  
+
   +Any INPUT elements of "type=hidden" are not visible
-  
+
   +The element must not be visible if that element, or any of its ancestors,
     is hidden or has a CSS display property that is none.
-  
+
   -MAP elements are shown if and only if the image it uses is visible. Areas
     within a map are shown if the enclosing MAP is visible.
-  
+
   -Any NOSCRIPT elements must not be visible if Javascript is enabled.
-  
+
   -The element must not be visible if any ancestor in the element's transitive
     closure of offsetParents has a fixed size, and has the CSS style of "overflow:hidden",
     and the element's location is not within the fixed size of the parent.
