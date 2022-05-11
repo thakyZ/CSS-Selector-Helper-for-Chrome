@@ -1,6 +1,6 @@
 // The function below is executed in the context of the inspected page!!!!!!
 //CAREFUL about comments!!!
-
+// eslint-disable-next-line
 function getAttributesFromElems() {
   function isBlank(o) {
     return typeof o === "undefined" || o === null || o === "";
@@ -69,6 +69,7 @@ function getAttributesFromElems() {
   return attributesAndFrames;
 }
 
+// eslint-disable-next-line
 function selectElem(query, desiredMatch, visibleOnly, inspectCurrentMatch) {
   var out = {
     curMatch: 0,
@@ -76,8 +77,8 @@ function selectElem(query, desiredMatch, visibleOnly, inspectCurrentMatch) {
   };
   if (query !== undefined && query != null && query.trim() !== "") {
     out.curMatch = parseInt(desiredMatch);
-    inspectCurrentMatch = inspectCurrentMatch == "true";
-    visibleOnly = visibleOnly == "true";
+    inspectCurrentMatch = inspectCurrentMatch === "true";
+    visibleOnly = visibleOnly === "true";
     var thisDoc = window.lastSelectedElem.ownerDocument;
     var matches = thisDoc.querySelectorAll(query);
     matches = Array.prototype.slice.call(matches);
@@ -88,7 +89,7 @@ function selectElem(query, desiredMatch, visibleOnly, inspectCurrentMatch) {
     }
     out.numMatch = matches.length;
     if (inspectCurrentMatch) {
-      if (out.numMatch == 0) {
+      if (out.numMatch === 0) {
         out.curMatch = 0;
       } else if (out.numMatch < out.curMatch) {
         out.curMatch = 1;
