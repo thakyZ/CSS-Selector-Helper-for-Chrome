@@ -1,3 +1,11 @@
+/* global browser, chrome */
+var browser_hook = undefined;
+if (typeof browser === "undefined") {
+  browser_hook = chrome;
+} else {
+  browser_hook = browser;
+}
+
 chrome.devtools.panels.elements.createSidebarPane(
     "CSS Selector",
     function(sidebar) {

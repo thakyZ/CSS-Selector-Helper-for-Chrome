@@ -51,7 +51,11 @@ export function testCustomTagFilters(customTagFilters: string): string | null {
   try {
     tagFilters.forEach((f) => RegExp(f));
   } catch (e) {
-    return e.message;
+    let errorMessage = "Failed to do something exceptional";
+    if (e instanceof Error) {
+      errorMessage = e.message;
+    }
+    return errorMessage;
   }
   return null;
 }

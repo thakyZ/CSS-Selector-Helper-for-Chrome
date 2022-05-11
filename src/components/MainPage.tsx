@@ -35,6 +35,7 @@ export const MainPage = () => {
 
   useEffect(() => {
     dispatch(new ClickGetSelectorsAction());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
